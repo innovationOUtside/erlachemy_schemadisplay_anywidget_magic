@@ -67,7 +67,7 @@ Generate schema as dot script and render using graphviz widget:
 
 __Note that this requires the `-m / --mode` to be set to `dot`, which it is by default, although we can also pass it explicitly.
 
-````python
+```python
 dot_data = %schema_magic -c "sqlite:///example.db" -m dot
 
 from IPython.display import SVG
@@ -79,3 +79,6 @@ If we pass a widget in to the magic, and we have a "full" `anywidget` running en
 `%schema_magic -c "sqlite:///example.db" -m dot -e`
 
 `%schema_magic -c "sqlite:///example.db" -m dot -w g`
+
+
+![Example of generating schema diagrma using magic](images/example.png)
