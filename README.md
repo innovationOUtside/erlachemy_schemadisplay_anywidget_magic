@@ -74,7 +74,7 @@ from IPython.display import SVG
 SVG( g.render(dot_data)["svg"] )
 ```
 
-If we pass a widget in to the magic, and we have a "full" `anywidget` running environment (not JupyterLite/marimo/pyodide), we can use the `-e / --embed` switch to return the dot diagram rendered as SVG (this will attempt to create/use an internally created graphviz widget). Alternatively, we can pass a grpahviz widget using the `-w / --widget-name` parameter.
+If we pass a widget in to the magic, and we have a "full" `anywidget` running environment (not JupyterLite/pyodide), we can use the `-e / --embed` switch to return the dot diagram rendered as SVG (this will attempt to create/use an internally created graphviz widget). Alternatively, we can pass a grpahviz widget using the `-w / --widget-name` parameter.
 
 `%schema_magic -c "sqlite:///example.db" -m dot -e`
 
@@ -82,3 +82,9 @@ If we pass a widget in to the magic, and we have a "full" `anywidget` running en
 
 
 ![Example of generating schema diagrma using magic](images/example.png)
+
+
+TO DO - fix things so it works in Marimo:
+
+- remove IPython refs
+- move function to create and render dot file out of magic and into a cleaner py api
